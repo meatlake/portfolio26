@@ -46,4 +46,3 @@ pnpm build
 ```sh
 pnpm lint
 ```
-# portfolio26
