@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(tar -tzf /home/julianvleesenbeek/.claude/projects/-home-julianvleesenbeek-portfolio26/5ad02c8d-3170-4ff9-9f7a-af30acb9dfc5/tool-results/webfetch-1777986779617-0d3okw.bin)",
+      "Bash(tar -xzOf /home/julianvleesenbeek/.claude/projects/-home-julianvleesenbeek-portfolio26/5ad02c8d-3170-4ff9-9f7a-af30acb9dfc5/tool-results/webfetch-1777986779617-0d3okw.bin portfolio/README.md)",
+      "Bash(tar -xzOf /home/julianvleesenbeek/.claude/projects/-home-julianvleesenbeek-portfolio26/5ad02c8d-3170-4ff9-9f7a-af30acb9dfc5/tool-results/webfetch-1777986779617-0d3okw.bin portfolio/chats/chat1.md)",
+      "Bash(tar -xzOf /home/julianvleesenbeek/.claude/projects/-home-julianvleesenbeek-portfolio26/5ad02c8d-3170-4ff9-9f7a-af30acb9dfc5/tool-results/webfetch-1777986779617-0d3okw.bin portfolio/project/portfolio-shared.css)",
+      "Bash(tar -xzOf /home/julianvleesenbeek/.claude/projects/-home-julianvleesenbeek-portfolio26/5ad02c8d-3170-4ff9-9f7a-af30acb9dfc5/tool-results/webfetch-1777986779617-0d3okw.bin portfolio/project/portfolio.jsx)",
+      "Bash(pnpm build *)",
+      "Bash(pnpm dev *)",
+      "Bash(curl -s -o /tmp/home-resp.html -w \"HTTP %{http_code}\\\\nbytes %{size_download}\\\\n\" http://localhost:5173/)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"main.ts: %{http_code}\\\\n\" http://localhost:5173/src/main.ts)",
+      "Bash(curl -s -o /dev/null -w \"App.vue: %{http_code}\\\\n\" http://localhost:5173/src/App.vue)",
+      "Bash(curl -s -o /dev/null -w \"HomeView: %{http_code}\\\\n\" http://localhost:5173/src/views/HomeView.vue)",
+      "Bash(curl -s -o /dev/null -w \"ProjectsSection: %{http_code}\\\\n\" http://localhost:5173/src/components/portfolio/ProjectsSection.vue)"
+    ]
+  }
+}
