@@ -13,7 +13,9 @@ import { TOOLS } from '@/data/portfolio'
         class="reveal flex items-end justify-between gap-8 mb-12 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-5 max-[720px]:mb-9"
       >
         <div>
-          <div class="font-mono text-xs tracking-[0.06em] uppercase text-accent-ink mb-3.5">02 — Ervaring</div>
+          <div class="font-mono text-xs tracking-[0.06em] uppercase text-accent-ink mb-3.5">
+            02 — Ervaring
+          </div>
           <h2
             class="text-[clamp(36px,5vw,64px)] leading-[1.02] tracking-tight font-semibold m-0 text-balance"
           >
@@ -22,8 +24,8 @@ import { TOOLS } from '@/data/portfolio'
           </h2>
         </div>
         <p class="max-w-120 text-ink-2 text-base text-pretty">
-          Door moderne programma's te gebruiken houd ik mijn kennis actueel en zet ik ideeën snel
-          om naar visuele en interactieve concepten.
+          Door moderne programma's te gebruiken houd ik mijn kennis actueel en zet ik ideeën snel om
+          naar visuele en interactieve concepten.
         </p>
       </div>
       <div class="reveal grid grid-cols-6 gap-3.5 max-[980px]:grid-cols-3 max-[560px]:grid-cols-2">
@@ -47,7 +49,7 @@ import { TOOLS } from '@/data/portfolio'
           </div>
           <div class="mt-auto h-1 rounded-full bg-line overflow-hidden relative">
             <span
-              class="absolute inset-y-0 left-0 bg-ink rounded-full transition-[width,background] duration-[800ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:bg-accent"
+              class="absolute inset-y-0 left-0 bg-ink rounded-full transition-[width,background] duration-800 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:bg-accent"
               :style="{ width: `${(t.level * 100).toFixed(0)}%` }"
             ></span>
           </div>

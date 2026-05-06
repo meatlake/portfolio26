@@ -21,13 +21,11 @@ const items = [
     :class="{ 'border-b-line': scrolled }"
   >
     <div class="mx-auto max-w-310 px-8 max-[720px]:px-5 flex items-center justify-between h-18">
-      <a
-        href="#home"
-        class="flex items-center gap-2.5 font-semibold tracking-[-0.01em]"
-      >
+      <a href="#home" class="flex items-center gap-2.5 font-semibold tracking-[-0.01em]">
         <span
           class="w-7.5 h-7.5 rounded-[9px] bg-ink text-bg grid place-items-center font-serif text-lg italic leading-none"
-        >J</span>
+          >J</span
+        >
         <span>Julian Vleesenbeek</span>
       </a>
       <div class="flex items-center gap-1">
@@ -42,8 +40,9 @@ const items = [
         </a>
         <a
           href="#contact"
-          class="ml-2 px-4 py-[9px] rounded-full bg-ink text-white text-sm font-medium transition-[transform,background,color] duration-200 hover:bg-accent hover:-translate-y-px"
-        >Contact ↗</a>
+          class="ml-2 px-4 py-2.25 rounded-full bg-ink text-white text-sm font-medium transition-[transform,background,color] duration-200 hover:bg-accent hover:-translate-y-px"
+          >Contact ↗</a
+        >
       </div>
     </div>
   </nav>
