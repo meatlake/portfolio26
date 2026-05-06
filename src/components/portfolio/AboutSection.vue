@@ -27,14 +27,14 @@ import { TRAITS } from '@/data/portfolio'
           <h3
             class="text-[clamp(28px,3.4vw,42px)] leading-[1.1] tracking-[-0.02em] font-semibold mt-0 mb-6 text-balance"
           >
-            Student, sportliefhebber,
+            Sportliefhebber,
             <em class="font-serif italic font-normal text-accent">teamspeler.</em>
           </h3>
           <p class="text-ink-2 text-[16.5px] leading-[1.65] mt-0 mb-4.5">
-            Ik ben Julian, student en sportliefhebber in hart en nieren. Ik speel al vanaf mijn
-            vierde korfbal bij Fortuna in Delft. Die sportieve achtergrond heeft mij gevormd tot een
-            echte teamspeler — ik werk graag samen, pas me makkelijk aan en draag bij aan een
-            positieve sfeer.
+            Ik ben Julian, sportliefhebber in hart en nieren. Ik speel al vanaf mijn vierde korfbal
+            bij Fortuna in Delft. Die sportieve achtergrond heeft mij gevormd tot een echte
+            teamspeler — ik werk graag samen, pas me makkelijk aan en draag bij aan een positieve
+            sfeer.
           </p>
           <p class="text-ink-2 text-[16.5px] leading-[1.65] mt-0 mb-4.5">
             Tegelijk ben ik niet bang om zelfstandig te werken. Ik pak vraagstukken op met een
