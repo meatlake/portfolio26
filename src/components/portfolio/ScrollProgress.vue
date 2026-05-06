@@ -12,24 +12,10 @@ const pct = computed(() => {
 </script>
 
 <template>
-  <div
-    :style="{
-      position: 'fixed',
-      left: 0,
-      right: 0,
-      top: 0,
-      height: '2px',
-      zIndex: 60,
-      pointerEvents: 'none',
-    }"
-  >
+  <div class="fixed inset-x-0 top-0 h-0.5 z-60 pointer-events-none">
     <div
-      :style="{
-        height: '100%',
-        width: `${pct}%`,
-        background: 'var(--accent)',
-        transition: 'width .15s linear',
-      }"
+      class="h-full bg-accent transition-[width] duration-150 ease-linear"
+      :style="{ width: `${pct}%` }"
     ></div>
   </div>
 </template>

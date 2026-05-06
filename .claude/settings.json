@@ -14,7 +14,9 @@
       "Bash(curl -s -o /dev/null -w \"main.ts: %{http_code}\\\\n\" http://localhost:5173/src/main.ts)",
       "Bash(curl -s -o /dev/null -w \"App.vue: %{http_code}\\\\n\" http://localhost:5173/src/App.vue)",
       "Bash(curl -s -o /dev/null -w \"HomeView: %{http_code}\\\\n\" http://localhost:5173/src/views/HomeView.vue)",
-      "Bash(curl -s -o /dev/null -w \"ProjectsSection: %{http_code}\\\\n\" http://localhost:5173/src/components/portfolio/ProjectsSection.vue)"
+      "Bash(curl -s -o /dev/null -w \"ProjectsSection: %{http_code}\\\\n\" http://localhost:5173/src/components/portfolio/ProjectsSection.vue)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm build-only *)"
     ]
   }
 }
