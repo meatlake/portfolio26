@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onUnmounted, ref } from 'vue'
+import posthog from 'posthog-js'
 
 const copied = ref(false)
 let timer: ReturnType<typeof setTimeout> | null = null
@@ -12,6 +13,11 @@ function copy() {
     copied.value = false
     timer = null
   }, 1600)
+  posthog.capture('email_copied')
+}
+
+function onEmailClick() {
+  posthog.capture('contact_email_clicked')
 }
 
 onUnmounted(() => {
@@ -46,6 +52,7 @@ onUnmounted(() => {
           <a
             href="mailto:jvleesenb@gmail.com"
             class="inline-flex items-center gap-3 bg-bg text-ink px-6 py-4 rounded-full text-[15px] font-medium transition duration-200 hover:bg-accent hover:text-white hover:-translate-y-px"
+            @click="onEmailClick"
           >
             <span class="text-lg">✉</span> jvleesenb@gmail.com
           </a>

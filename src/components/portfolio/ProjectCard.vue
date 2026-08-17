@@ -1,10 +1,21 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { Project } from '@/data/portfolio'
+import posthog from 'posthog-js'
 
 const props = defineProps<{ project: Project; idx: number }>()
 
 const num = computed(() => String(props.idx + 1).padStart(2, '0'))
+
+function onCardClick() {
+  posthog.capture('project_card_clicked', {
+    project_id: props.project.id,
+    project_title: props.project.title,
+    project_category: props.project.category,
+    project_year: props.project.year,
+    is_featured: props.project.featured ?? false,
+  })
+}
 </script>
 
 <template>
@@ -12,6 +23,7 @@ const num = computed(() => String(props.idx + 1).padStart(2, '0'))
     :to="`/projects/${project.id}`"
     class="group bg-card border border-line rounded-card-lg overflow-hidden flex flex-col transition-[transform,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.2,0.8,0.2,1)] relative hover:-translate-y-1 hover:shadow-card-md hover:border-[oklch(0.78_0.01_80)] max-[980px]:col-span-1"
     :class="project.featured ? 'col-span-6' : 'col-span-3'"
+    @click="onCardClick"
   >
     <div
       class="relative overflow-hidden border-b border-line bg-bg-warm"

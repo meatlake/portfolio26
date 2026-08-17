@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { PROJECTS } from '@/data/portfolio'
+import posthog from 'posthog-js'
 
 const route = useRoute()
 
@@ -11,6 +12,13 @@ const slug = computed(() => {
 })
 
 const project = computed(() => PROJECTS.find((p) => p.id === slug.value))
+
+onMounted(() => {
+  posthog.capture('project_stub_viewed', {
+    project_id: slug.value,
+    project_found: !!project.value,
+  })
+})
 </script>
 
 <template>

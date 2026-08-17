@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { TAGLINE } from '@/data/portfolio'
+import posthog from 'posthog-js'
+
+function onCtaClick(label: string, target: string) {
+  posthog.capture('hero_cta_clicked', { cta_label: label, cta_target: target })
+}
 </script>
 
 <template>
@@ -25,6 +30,7 @@ import { TAGLINE } from '@/data/portfolio'
         <a
           href="#projects"
           class="group inline-flex items-center gap-2.5 px-5.5 py-3.5 rounded-full text-[15px] font-medium border border-transparent cursor-default transition duration-200 bg-ink text-bg hover:bg-accent hover:-translate-y-px"
+          @click="onCtaClick('Bekijk mijn projecten', '#projects')"
         >
           Bekijk mijn projecten
           <span class="inline-block transition-transform duration-250 group-hover:translate-x-0.75">→</span>
@@ -32,6 +38,7 @@ import { TAGLINE } from '@/data/portfolio'
         <a
           href="#contact"
           class="group inline-flex items-center gap-2.5 px-5.5 py-3.5 rounded-full text-[15px] font-medium border border-line text-ink bg-transparent cursor-default transition duration-200 hover:bg-card hover:border-[oklch(0.78_0.01_80)] hover:-translate-y-px"
+          @click="onCtaClick('Neem contact op', '#contact')"
         >Neem contact op</a>
       </div>
       <div

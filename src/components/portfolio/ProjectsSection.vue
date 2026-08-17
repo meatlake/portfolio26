@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { PROJECTS } from '@/data/portfolio'
 import ProjectCard from './ProjectCard.vue'
+import posthog from 'posthog-js'
 
 const active = ref<string>('Alle')
 
@@ -53,7 +54,7 @@ const filtered = computed(() =>
               type="button"
               class="px-3.5 py-2 rounded-full text-[13px] border-0 transition-colors duration-200 cursor-default hover:text-ink"
               :class="active === c ? 'bg-ink text-bg' : 'bg-transparent text-ink-2'"
-              @click="active = c"
+              @click="() => { active = c; posthog.capture('projects_category_filtered', { category: c }) }"
             >
               {{ c }}
             </button>
