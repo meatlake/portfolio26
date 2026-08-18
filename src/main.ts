@@ -22,6 +22,7 @@ if (!token) {
   posthog.init(token, {
     api_host: host || 'https://eu.i.posthog.com',
     defaults: '2026-01-30',
+    capture_performance: { web_vitals: true },
   })
 }
 
